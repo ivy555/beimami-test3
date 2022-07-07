@@ -1,0 +1,132 @@
+.wishlist-item {
+  border-radius: 8px;
+  width: 100%;
+  height: 164px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.4);
+  margin-bottom: 24px !important;
+  box-sizing: content-box;
+  background: #1A1F26;
+  color: #d3d3d3;
+  transition: 0.5s
+}
+
+.wishlist-item:hover {
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.66);
+  transition: 0.5s
+}
+
+.item-category {
+  line-height: 1em;
+  padding-bottom: 14px;
+  color: var(--header-text-color);
+}
+
+.item-img {
+  object-fit: cover;
+  height: 164px;
+  width: 164px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.middle-side {
+  padding: 16px !important;
+  max-width: calc(100% - 300px);
+  width: auto;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.item-title {
+  margin-top: auto;
+  font-weight: 700;
+}
+
+.right-side {
+  height: 100%;
+  position: relative;
+  right: 0;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  padding: 16px 0px !important;
+  align-self: flex-end;
+}
+
+.item-desc {
+  display: block;
+  white-space: normal;
+  margin-bottom: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: auto;
+  text-align: justify;
+}
+
+.top-right-item fa {
+  font-size: 18px;
+}
+
+span {
+  display: block;
+}
+
+.top-right-item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: auto;
+}
+
+.bottom-right-item {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+}
+
+.bottom-right-item .btn {
+  color: #FFF;
+  background: #1de9b6;
+  margin-left: auto;
+  width: 100%;
+}
+
+.to-cart {
+  padding-right: 16px;
+}
+
+fa:hover {
+  transition: 0.25s;
+  color: #FF6627;
+}
+
+.clicked {
+  color: #FF6627 !important;
+}
+
+.btn.buy {
+  background: #8BC34A !important;
+}
+
+.btn.buy:hover {
+  margin-bottom: 2px;
+  background: #9cdb53 !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  transition: 0.25s;
+}
+
+.btn.rent {
+  background: #541AD3 !important;
+}
+
+.btn.rent:hover {
+  margin-bottom: 2px;
+  background: rgb(100, 28, 255) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  transition: 0.25s;
+}

@@ -1,0 +1,157 @@
+
+<div class="background"></div>
+
+<div class="navigation_bar" style="overflow: hidden;">
+  <img class="top_left_logo" src="/../../../assets/imgs/logo-white.png">
+  <div class="top_text">Hier treffen Genießer auf lokale Hobby-Köche.</div>
+  <img class="top_cook_logo" src="/../../../assets/imgs/logo-white1.png">
+</div>
+
+
+<div class="container parent-container">
+  <div class="row">
+    <div class="col-lg-3 col-3">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="col-lg-9 col-12">
+      <form
+        class="update-profile"
+        [formGroup]="profileForm"
+        (ngSubmit)="onSubmit()"
+      ><!--
+        <div class="row">
+          <div class="col-12 alert  alert-danger" *ngIf="error">
+            <span>{{ error }}</span>
+          </div>
+          <div class="col-12 alert alert-success" *ngIf="success">
+            <span>{{ success }}</span>
+          </div>
+        </div> -->
+
+        <div class="col-md-3 col-12 nopadding">
+
+          <div class="form-group file-upload upload-button">
+            <!-- <label for="custom-input">Profile Picture</label>
+            <input
+              type="file"
+              class="form-control-file image-upload"
+              multiple
+              id="files-input"
+              name="files"
+              (change)="ImageSelected($event)"  -->
+            />
+          </div>
+
+          <div class="checkbox"> 
+            <input type="checkbox" id="Genießer" name="Genießer" value="Genießer">
+            <label for="Genießer"> Genießer </label>
+            
+            <input type="checkbox" id="Koch" name="Koch" value="Koch">
+            <label for="Koch"> Koch </label>
+          </div>
+
+
+        
+        </div>
+
+
+        <div class="row">
+          <div class="col-12 form-group">
+            <label>Name : <strong>{{ (!!data) ? data.name : ""}}</strong></label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 form-group">
+            <label for="email">Email: <strong>{{(!!data) ? data.email : ""}}</strong></label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-12 form-group">
+            <label for="address">Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              [(ngModel)]="this.addressValue"
+              formControlName="address"
+              placeholder="Home Address"
+            />
+            <small id="addressHelp" class="form-text text-muted"
+              >Street, House No, Post Code.</small>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-12 form-group">
+            <label for="city">City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              [(ngModel)]="this.cityValue"
+              formControlName="city"
+              placeholder="Fulda"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-12 form-group">
+            <label for="country">Country</label>
+            <input class="form-control"id="country"formControlName="country" placeholder="Your country" [(ngModel)]="this.selValue" >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-12 form-group">
+            <label for="phone">Phone</label>
+            <input
+              (keypress)="numberOnly($event)"
+              type="text"
+              class="form-control"
+              id="phone"
+              [(ngModel)]="this.phoneValue"
+              formControlName="phone"
+              placeholder="015XXXXXXXXXXXX"
+            />
+          </div>
+        </div>
+
+        <br />
+        <div class="row">
+          <div class="col-lg-4 col-6 form-group mx-auto">
+            <button
+              type="submit"
+              class="btn update"
+              [disabled]="profileForm.invalid"
+              style="width: 100%;"
+            >
+              Update
+            </button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="dummy">
+<div class="{{error ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'}}" *ngIf="error">
+  <div class="notifier-wrapper">
+    <div class="notifier-text">
+      {{ error }}
+    </div>
+  </div>
+</div>
+
+<div class="{{success ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'}}" *ngIf="success">
+  <div class="notifier-wrapper">
+    <div class="{{success ? 'notifier-text n-success' : 'notifier-text'}}">
+      {{ success }}
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container nopadding right-side">
+  <div class="side-menu">
+    <h5 class="menu-title">Shopping Cart</h5>
+    <button type="button" class="btn" (click)="buyAll()">Buy all</button>
+    <button type="button" class="btn btn-delete" (click)="emptyCart()">
+      Clear Cart
+    </button>
+  </div>
+</div>
+
+<div class="dummy">
+  <div
+    class="{{
+      error ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+    }}"
+    *ngIf="error"
+  >
+    <div class="notifier-wrapper">
+      <div class="notifier-text">
+        {{ error }}
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="{{
+      success ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+    }}"
+    *ngIf="success"
+  >
+    <div class="notifier-wrapper">
+      <div class="{{ success ? 'notifier-text n-success' : 'notifier-text' }}">
+        {{ success }}
+      </div>
+    </div>
+  </div>
+</div>

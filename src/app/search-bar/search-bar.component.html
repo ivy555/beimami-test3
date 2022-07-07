@@ -1,0 +1,22 @@
+  <div class="search-container">
+    <div class="nopadding row container search-wrapper">
+      <div class="col-12 nopadding">
+        <form class="nopadding search-form">
+          <select class="nopadding clickable" (change)="search()" [(ngModel)]="catId" #ctrl="ngModel" [ngModelOptions]="{standalone: true}">
+            <option selected="selected" value="0">Select Category</option>
+            <option *ngFor="let category of categories;" value="{{category.id}}">
+              {{category.name}}
+            </option>
+          </select>
+          <input class="nopadding" type="text"
+           (input)="search();"
+           #searchInput
+           [(ngModel)]="query" #ctrl="ngModel" [ngModelOptions]="{standalone: true}" placeholder="Search for item...">
+          <button class="nopadding clickable" (click)="search();">
+            <fa name="search"></fa>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,171 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+.container {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: #1A1F26;
+  padding: 24px;
+  color: #eee;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75);
+}
+.clickable {
+  position: absolute;
+  top: 8px;
+  right: 30px;
+  font-size: 18px;
+  color: #8BC34A;
+}
+.rating {
+  position: absolute;
+  left: 170  
+  
+  
+  px;
+  font-size: 18px;
+  color:goldenrod;
+}
+.delivery {
+  position: absolute;
+  left: 220px;
+  font-size: 18px;
+  color:grey;
+}
+.fa-thin {
+  position: absolute;
+  left: 280px;
+  font-size: 18px;
+  color:grey;
+}
+.order {
+  position: absolute;
+  left: 300px;
+  font-size: 18px;
+  color:grey;
+}
+
+
+.top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.add-to-wishlist {
+  display: block;
+  margin-left: auto;
+}
+
+.add-to-wishlist:hover {
+  color: rgb(255, 115, 21);
+}
+
+.item-desc {
+  color: #EEE;
+  text-align: justify;
+}
+
+.item-info,
+.item-actions {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.item-actions {
+  padding: 16px 0 0 0;
+}
+
+.item-actions input,
+.item-actions button {
+  width: -webkit-calc(50% - 32px) !important;
+  width: calc(50% - 32px) !important;
+}
+
+hr {
+  border-color: #272D35;
+}
+
+input {
+  background-color: #272D35;
+  border: 0px solid white;
+  color: #d4d4d4;
+}
+
+.quantity:focus {
+  background-color: rgb(47, 55, 66);
+  border: 0px solid white;
+  color: #FFF;
+}
+
+.btn {
+  color: #FFF;
+}
+
+.btn.buy {
+  background: #8BC34A !important;
+  position: relative;
+  bottom: 0px;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.btn.buy:hover {
+  position: relative;
+  bottom: 2px;
+  background: #9cdb53 !important;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.btn.rent {
+  position: relative;
+  bottom: 0px;
+  background: #541AD3 !important;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.btn.rent:hover {
+  position: relative;
+  bottom: 2px;
+  background: rgb(100, 28, 255) !important;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.btn.cart {
+  background: rgb(255, 115, 21);
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.btn.cart:hover {
+  position: relative;
+  bottom: 2px;
+  background: rgb(255, 169, 39);
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}

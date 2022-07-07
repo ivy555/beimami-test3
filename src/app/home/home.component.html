@@ -1,0 +1,192 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+
+<div class="container parent-container">
+  <app-search-bar></app-search-bar>
+</div>
+<div class="nopadding home-img-container container-fluid">
+  <div class="row nopadding home-img">
+    <p class="text-img">
+      COOK. <br />
+      ORDER HOMEMADE. <br />
+      DISH.
+      <span class="mini-text-img">Enjoy Your Meal :)</span>
+    </p>
+  </div>
+</div>
+
+
+<div class="popular-dishes-background">
+<div class="container nopadding title-container">
+  <h3 class="section-title">
+    Popular Dishes
+  </h3>
+</div>
+
+<div class="container nopadding bottom-wrapper">
+  <div class="row deals-container nopadding">
+    <div class="nopadding wrapper">
+      <app-home-item
+        *ngFor="let ad of popularAds; let i = index"
+        img_link="{{ appComp.serverUrl }}/{{ ad.mainpicture }}"
+        item_id="{{ ad.id }}"
+        item_title="{{ ad.item_name }}"
+        item_price="{{ ad.price }}"
+      >
+      </app-home-item>
+    </div>
+  </div>
+</div>
+
+<div class="container nopadding title-container">
+  <h3 class="section-title">Items</h3>
+</div>
+
+<div class="container nopadding bottom-wrapper">
+  <div class="row deals-container nopadding">
+    <div class="top-right-item">
+      <span class="to-cart">
+        <fa class="clickable" name=" shopping-cart" title="Add to cart" (click)="$event.stopPropagation()"></fa>
+      </span>
+      <span class="to-wishlist clicked">
+        <fa class="clickable" name="heart" title="Add to wishlist" (click)="$event.stopPropagation()"></fa>
+      </span>
+    </div>
+    <div class="nopadding wrapper">
+      <app-home-item
+        *ngFor="let ad of dealAds; let i = index"
+        img_link="{{ appComp.serverUrl }}/{{ ad.mainpicture }}"
+        item_id="{{ ad.id }}"
+        item_title="{{ ad.item_name }}"
+        item_price="{{ ad.price }}"
+      >
+      </app-home-item>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="beimami-appstore">
+  <div class="wrapper-appstore">
+  <div class="app-buttons">
+    
+      <a href="#" class="btn btn-store">
+        <span class="fab fa-apple fa-3x pull-left"></span> 
+        <span class="btn-label">Download on the</span>
+        <span class="btn-caption">App Store</span>
+      </a>
+
+      <br/>
+
+      <a href="#" class="btn btn-store">
+        <span class="fab fa-google-play fa-3x pull-left"></span> 
+        <span class="btn-label">Download on the</span>
+        <span class="btn-caption">Google Play</span>
+      </a>
+  
+    <div class="app-text-big">
+      <span class="btn-caption-white">Guten </span>
+      <span class="btn-caption-black">App</span>
+      <span class="btn-caption-white">etit!</span>
+    </div>
+
+    <div class="app-text-small">
+      Hol dir jetzt die BEIMAMI-App für deine Bestellungen
+      </div>
+
+    
+
+  </div>
+
+  <div class="app-download-img">
+  </div>
+</div>
+
+</div>
+
+<div class="home-invite-container container-fluid nopadding">
+  <div class="row home-invite nopadding">
+    <span class="text-invite" *ngIf="!this.appComp.isLogged"
+      >BE PART OF US</span
+    >
+    <span
+      class="text-invite clickable"
+      *ngIf="!this.appComp.isLogged"
+      (click)="redirect('/login')"
+      >GET STARTED</span
+    >
+    <span class="text-invite" *ngIf="this.appComp.isLogged"
+      >DISCOVER OUR ITEMS</span
+    >
+    <span
+      class="text-invite clickable"
+      *ngIf="this.appComp.isLogged"
+      (click)="redirect('/search-results')"
+      >BROWSE</span
+    >
+  </div>
+</div>
+
+<div class="bg-footer-icon">
+<div class="container footer-icon">
+<!-- Section: Social media -->
+<section class="icons">
+  <!-- Facebook -->
+  <a
+      class="btn btn-link btn-floating btn-lg text-dark m-1"
+      href="https://www.facebook.com/BeiMamiApp/" target="_blank" rel="noopener noreferrer"
+      role="button"
+      data-mdb-ripple-color="dark"
+      ><i class="fab fa-facebook-f"></i
+    ></a>
+
+  <!-- Twitter -->
+  <a
+      class="btn btn-link btn-floating btn-lg text-dark m-1"
+      href="#!"
+      role="button"
+      data-mdb-ripple-color="dark"
+      ><i class="fab fa-twitter"></i
+    ></a>
+
+  <!-- Google -->
+  <a
+      class="btn btn-link btn-floating btn-lg text-dark m-1"
+      href="#!"
+      role="button"
+      data-mdb-ripple-color="dark"
+      ><i class="fab fa-google"></i
+    ></a>
+
+  <!-- Instagram -->
+  <a
+      class="btn btn-link btn-floating btn-lg text-dark m-1"
+      href="https://www.instagram.com/beimamiapp/" target="_blank" rel="noopener noreferrer"
+      role="button"
+      data-mdb-ripple-color="dark"
+      ><i class="fab fa-instagram"></i
+    ></a>
+
+           </section>
+        <!-- Section: Social media -->
+</div>
+</div>
+
+<!-- <div>
+  <input
+    class="nopadding"
+    type="text"
+    #searchInput
+    [(ngModel)]="message"
+    #ctrl="ngModel"
+    [ngModelOptions]="{ standalone: true }"
+    placeholder="write message"
+  />
+  <button class="nopadding clickable" (click)="sendMessage()"></button>
+</div> -->
+

@@ -1,0 +1,218 @@
+::selection {
+background: #3fa32b;
+}
+
+
+.background{
+background-image: url('/../../../assets/imgs/homepage4.jpg');
+/* background-size: cover;
+background-position: center;
+background-attachment: fixed; */
+
+position: fixed;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+height: 100%;
+width: -webkit-fill-available;
+overflow:auto
+}
+
+.center {
+display: flex;
+flex-wrap: wrap;
+height: 70%;
+
+} 
+
+/* .side-menu-left {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: inline-grid;
+  padding: 32px !important;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+  color: #d3d3d3;
+  width: 200px;
+  height: 70%;
+} */
+
+.side-menu-right {
+/* position: absolute; */
+min-width: 260px;
+min-height: 520px;
+margin-top: 20px;
+margin-right: 10px;
+margin-left:20px;
+/* padding: 16px 0 !important; */
+-webkit-border-radius: 8px;
+border-radius: 8px;
+/* background: rgba(0, 0, 0, 0.7);
+-webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33); */
+color: #d3d3d3;
+width: 100%;
+height: 100%;
+
+}
+
+/* .side-menu-right a {
+padding: 4px 10px 4px 25px !important;
+width: 100%;
+-webkit-transition: 0.25s;
+-o-transition: 0.25s;
+transition: 0.25s;
+}
+
+.side-menu-right a:hover {
+background: #3fa32b;
+-webkit-transition: 0.25s;
+-o-transition: 0.25s;
+transition: 0.25s;
+} */
+
+.text-img {
+  /* position: absolute; */
+  /* width: 180px; */
+  /* font-size: 1.2vmin; */
+  max-width: 220px;
+  min-width: 200px;
+  height: 85%;
+  line-height: normal;
+  /* margin-left: 48px; */
+  margin-top: -110px;
+  text-shadow: 0 0 9px #000000, 0 0 9px #000000;
+  /* line-height: 1em; */
+  padding-left: 24px;
+  border-left: 12px solid rgb(63, 163, 43);
+  -webkit-border-image: --webkit-gradient(linear,
+      left top, left bottom,
+      color-stop(60%, rgb(63, 163, 43)),
+      to(rgba(0, 0, 0, 0))) 1 100%;
+  -webkit-border-image: linear-gradient(to bottom,
+  rgb(63, 163, 43) 60%,
+      rgba(0, 0, 0, 0)) 1 100%;
+  -o-border-image: -o-linear-gradient(top,
+  rgb(63, 163, 43) 60%,
+      rgba(0, 0, 0, 0)) 1 100%;
+  border-image: --webkit-gradient(linear,
+      left top, left bottom,
+      color-stop(60%, rgb(63, 163, 43)),
+      to(rgba(0, 0, 0, 0))) 1 100%;
+  border-image: linear-gradient(to bottom,
+  rgb(63, 163, 43) 60%,
+      rgba(0, 0, 0, 0)) 1 100%;
+  
+  font-family: 'Montserrat-Local', 'Montserrat';
+  font-size: 1em;
+  color: #FFF;
+  font-weight: bolder;
+  z-index: 999;
+}
+
+.text-top{
+  border-bottom: 10px dotted rgb(63, 163, 43);
+}
+
+.text-middle{
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 22px;
+  border-bottom: 10px dotted rgb(63, 163, 43);
+}
+
+.text-bottom{
+  font-size: 12px;
+  /* border-bottom: 4px solid rgb(63, 163, 43); */
+}
+
+
+.slider-container {
+height: 100%;
+width: 100%;
+position: relative;
+overflow: hidden;
+text-align: center;
+}
+
+.menu {
+position: absolute;
+left: 0;
+z-index: 900;
+width: 100%;
+bottom: 0;
+box-shadow: 5px 5px 5px #666;
+}
+
+.menu label {
+cursor: pointer;
+display: inline-block;
+width: 24px;
+height: 24px;
+background: rgb(255, 255, 255);
+border-radius: 50px;
+margin: 0 0.2em 3em;
+box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+.menu label:hover,.menu label:focus {
+background: #3fa32b;
+}
+
+.slide {
+border-radius: 8px;
+padding: 8px;  
+width: 99%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 100%;
+/* z-index: 10; */
+padding: 8em 1em 0;
+background-size: cover;
+background-position: 48% 35%;
+transition: left 0s 0.75s;
+}
+
+[id^="slide"]:checked + .slide {
+left: 0;
+z-index: 100;
+transition: left 0.65s ease-out;
+}
+
+.slide-1 {
+background-image: url('/../../../assets/imgs/female-cook-testimonial.jpg');
+}
+
+.slide-2 {
+background-image: url('/../../../assets/imgs/male-cook.jpg');
+}
+
+.slide-3 {
+background-image: url('/../../../assets/imgs/mature-woman-cooking.jpg');
+}
+
+
+/* Small devices (landscape phones, 368px and up) */
+@media (max-width: 450px) {
+.text-img,.text-top ,.text-middle, .text-bottom {
+padding-left: 1px;
+/* border-left: 8px solid rgb(63, 163, 43); */
+font-size: 0.9em;
+width: 110px;
+}
+
+.side-menu-right{
+  min-height: 440px;
+}
+
+.text-invite {
+font-size: 1.25em;
+padding: 16px 32px;
+}
+}

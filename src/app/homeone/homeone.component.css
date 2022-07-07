@@ -1,0 +1,90 @@
+::selection {
+  background: #3fa32b;
+}
+
+.parent-container {
+  height: 100vh;
+}
+
+.background{
+    background-image: url('/../../../assets/imgs/homepage6.jpg');
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: -webkit-fill-available;
+    overflow:auto;
+  }
+
+
+  
+  h2 {
+    color: #EEE;
+  }
+  
+  .fa{   /* align icon fa with text */
+    left: 4px;
+  }
+
+  .fas{   /* align icon fa with text */
+    left: 4px;
+  }
+
+  .far{   /* align icon fa with text */
+    left: 4px;
+  }
+  
+  i{ /* align fa icons with text */
+    position: absolute;
+    line-height: 25px; 
+  }
+  
+  .side-menu {
+    padding: 16px 0 !important;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+    color: #d3d3d3;
+    width: 198px;
+    right: 0;
+    position: absolute;
+
+  }
+  
+  hr {
+    width: 90%;
+    border-color: #272d35;
+  }
+  
+  .side-menu a {
+    padding: 4px 10px 4px 25px !important;
+    width: 100%;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+  }
+  
+  .side-menu a:hover {
+    background: #3fa32b;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+  }
+  
+  /* Small devices (landscape phones, 368px and up) */
+  @media (max-width: 368px) {
+    .text-img {
+      padding-left: 24px;
+      border-left: 8px solid rgb(255, 102, 39);
+      font-size: 3em;
+    }
+  
+    .text-invite {
+      font-size: 1.25em;
+      padding: 16px 32px;
+    }
+  }

@@ -1,0 +1,167 @@
+::selection {
+background: #3fa32b;
+}
+
+.container {
+    box-sizing: border-box;
+}
+
+.background{
+    background-image: url('/../../../assets/imgs/cook-cutting.jpg');
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: -webkit-fill-available;
+    overflow:auto
+    }
+
+
+
+h2 {
+    color: #EEE;
+}
+
+.fa{   /* align icon fa with text */
+    left: 4px;
+}
+
+.fas{   /* align icon fa with text */
+    left: 4px;
+}
+
+.far{   /* align icon fa with text */
+    left: 4px;
+}
+
+.fa-file-invoice-dollar{
+    left: 6px;
+}
+
+i{ /* align fa icons with text */
+    /* position: absolute; */
+    line-height: 25px; 
+}
+
+input{
+    margin-left: 20px;
+}
+
+.fa-caret-down{
+    position: relative;
+    color: #3fa32b;
+}
+
+.side-menu-left {
+    padding: 16px 0 !important;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+    color: #d3d3d3;
+    width: 165px;
+    height: 250px;
+    float:left;
+    overflow:hidden;
+    /* position:fixed; */
+    /* display: flex; */
+    /* right: 0; */
+    /* position: absolute; */
+}
+
+.side-menu-right {
+    padding: 16px 0 !important;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+    color: #d3d3d3;
+    width: 165px;
+    height: 250px;
+    float:right;
+    overflow:hidden;
+    /* position:relative; */
+    /* right: 0; */
+    /* position: absolute; */
+}
+
+hr {
+    width: 90%;
+    border-color: #272d35;
+}
+
+.side-menu-right a {
+    padding: 4px 10px 4px 25px !important;
+    width: 100%;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+}
+
+.side-menu-right a:hover {
+    background: #3fa32b;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+}
+
+.side-menu-left label:hover {
+    background: #3fa32b;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+}
+.map-container{
+    position: centre;
+    top: 30px;
+    left: 30px;
+    width: 371px;
+    /* width: 100%; */
+    height: 486px;
+    background: url(/assets/imgs/bg-map-3ce3bf3c4a6e661ab6c94e28e7b77d51.png) no-repeat;
+    list-style: none;
+    display: block;
+    overflow: hidden;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+a {
+    display: block;
+    text-indent: -1000px;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    left: 3px;
+    top: 0;
+    bottom: 15px;
+    right: 15px;
+}
+   
+
+    
+
+
+/* Small devices (landscape phones, 368px and up) */
+@media (max-width: 368px) {
+    .text-img {
+    padding-left: 24px;
+    border-left: 8px solid rgb(255, 102, 39);
+    font-size: 3em;
+    }
+
+    .text-invite {
+    font-size: 1.25em;
+    padding: 16px 32px;
+    }
+
+
+}

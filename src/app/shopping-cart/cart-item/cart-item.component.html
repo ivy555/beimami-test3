@@ -1,0 +1,47 @@
+<div
+  class="row nopadding wishlist-item clickable"
+  [routerLink]="'/item-view'"
+  [queryParams]="{ itemId: item_id }"
+>
+  <div class="left-side nopadding">
+    <img class="item-img" src="{{ appComp.serverUrl }}/{{ thumbnail }}" />
+  </div>
+  <div class="middle-side nopadding">
+    <h4 class="item-title">{{ item_title }}</h4>
+    <button
+      type="button"
+      class="btn buy"
+      (click)="buy(item_id); $event.stopPropagation()"
+    >
+      Buy &euro;{{ item_price }}
+    </button>
+    <p class="item-desc">{{ item_description }}</p>
+  </div>
+</div>
+<div class="dummy">
+  <div
+    class="{{
+      error ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+    }}"
+    *ngIf="error"
+  >
+    <div class="notifier-wrapper">
+      <div class="notifier-text">
+        {{ error }}
+      </div>
+    </div>
+  </div>
+{{success | json }}
+  <div
+    class="{{
+      success ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+    }}"
+    *ngIf="success"
+  >
+    <div class="notifier-wrapper">
+      <div class="{{ success ? 'notifier-text n-success' : 'notifier-text' }}">
+        {{ success }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+footer {
+  display: none; /* hide footer */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  /* padding: 12px; */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+a:hover {
+  background-color: rgba(0, 255, 234, 0.795);
+  color: #ff0000;
+}
+
+.container {
+  height: 40px!important;
+}
+
+.footer-icon{
+  padding-top: none!important;
+}
+
+.clickable {
+  color: #ffffff;
+}
+
+.clickable:hover {
+  color: rgb(0, 0, 0);
+}
+
+.text-dark {
+  color: #ffffff!important;
+  margin: 0%!important;
+}
+
+@media (max-width: 576px) {
+  footer {
+    font-size: 10px;
+  }
+}

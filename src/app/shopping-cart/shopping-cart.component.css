@@ -1,0 +1,114 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+.cart-container {
+  position: relative;
+  top: 84px;
+  margin: 32px auto !important;
+  padding: 0 !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.items-wrapper {
+  width: -webkit-calc(100% - 280px);
+  width: calc(100% - 280px);
+  position: relative;
+  margin-right: 24px !important;
+  right: 0px;
+  padding: 0 !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.navigation_bar{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.6);
+  width: 100%;
+  padding-top: 50px;
+  height: 180px;
+  color: rgb(255, 255, 255);
+}
+
+.top_left_logo {
+  min-width: 180px;
+  vertical-align: top;
+  margin-right: 10px;
+  max-width: 40%;
+  max-height: 90%;
+}
+
+.top_text {
+  font-weight: bold;
+}
+
+.top_cook_logo{
+  min-width: 100px;
+  max-width: 20%;
+  max-height: 30%;
+  margin-left: 10px;
+}
+
+.background{
+  background-image: url('/../../../assets/imgs/homepage4.jpg');
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: -webkit-fill-available;
+  overflow:auto;
+}
+
+/* Small devices (landscape phones, 368px and up) */
+@media (max-width: 368px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+
+  .container,
+  .row {
+    width: 100%;
+    max-width: none;
+  }
+
+  .cart-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    padding: 24px !important;
+    top: 28px;
+  }
+
+  .items-wrapper {
+    width: 100%;
+    margin-top: 96px !important;
+  }
+
+  .cart-wrapper {
+    width: 100%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {}

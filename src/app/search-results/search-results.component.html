@@ -1,0 +1,23 @@
+<div class="background"></div>
+
+<div class="container parent-container">
+  <app-search-bar></app-search-bar>
+</div>
+
+<div class="row container nopadding search-container">
+  <div class="nopadding">
+    <app-results-menu></app-results-menu>
+  </div>
+  <div class="nopadding items-wrapper">
+    <app-results-item
+      *ngFor="let ad of ads; let i = index"
+      img_link="{{ appComp.serverUrl }}/{{ ad.mainpicture }}"
+      item_id="{{ ad.id }}"
+      item_title="{{ ad.item_name }}"
+      item_price="{{ ad.price }}"
+      item_desc="{{ ad.item_description }}"
+      item_category="{{ ad.category.name }}"
+      item_sold="{{ ad.sold }}"
+    ></app-results-item>
+  </div>
+</div>

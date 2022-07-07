@@ -1,0 +1,14 @@
+<div class='container' *ngIf="data">
+  <div class='col-12 nopadding seller-info'>
+    <div class="info-left">
+      <span>Cook : <strong>
+        <button class="btn_user" onclick="">{{data.owner.name}}</button>
+      </strong></span>
+
+    </div>
+    <div class="info-right">
+      <fa class="clickable" name="envelope" (click)="redirectToChat();"></fa>
+
+    </div>
+  </div>
+</div>

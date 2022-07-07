@@ -1,0 +1,96 @@
+<div class="container ">
+  <div *ngIf="data">
+    <div class="top">
+      <!-- <h2>ID: {{data.id}} </h2><br> -->
+
+      <h3 class="item-title">{{ data.item_name | titlecase }}</h3>
+      <!-- <fa class="add-to-wishlist clickable" name="heart" title="Add to wishlist"></fa> -->
+    </div>
+
+    <p class="item-desc">{{ data.item_description | titlecase }}</p>
+    <hr />
+    <div class="item-info">
+      <div class="prc">
+        Price: <strong>&euro; {{ data.price }}</strong>
+      </div>
+      <div class="to-wishlist clicked">
+        <fa class="clickable" name="heart" title="Add to wishlist" (click)="$event.stopPropagation()"></fa>
+      </div>
+      <div class="to-wishlist clicked">
+        <fa class="rating" name="star" title="rating for the item" (click)="$event.stopPropagation()"></fa>
+      </div>
+      <div class="to-wishlist clicked">
+        <fa class="delivery" name="bicycle" title="Delivery time" (click)="$event.stopPropagation()"></fa>
+      </div>
+      <div class="to-wishlist clicked">
+        <fa class="order" name="shopping-bag" title="Min.order" (click)="$event.stopPropagation()"></fa>
+      </div>
+      <div class="cnd">
+        Item : <strong>{{ data.used_new | titlecase }}</strong>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <div class="item-actions" *ngIf="showPurchaseButtons">
+    <button
+      type="button"
+      class="btn buy"
+      (click)="buy(data.id)"
+      *ngIf="!data.sold"
+    >
+      Buy
+    </button>
+    <!-- <button
+      type="button"
+      class="btn sold"
+      *ngIf="data.sold"
+      (click)="itemSold()"
+    >
+      Sold
+    </button> -->
+    <button
+      type="button"
+      class="btn cart"
+      (click)="addToCart()"
+      *ngIf="!data.sold"
+    >
+      Add to Cart
+    </button>
+    <button
+      type="button"
+      class="btn cart"
+      *ngIf="data.sold"
+      (click)="itemSold()"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+<div class="dummy">
+  <div
+    class="{{
+      error ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+    }}"
+    *ngIf="error"
+  >
+    <div class="notifier-wrapper">
+      <div class="notifier-text">
+        {{ error }}
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="{{
+      success ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+    }}"
+    *ngIf="success"
+  >
+    <div class="notifier-wrapper">
+      <div class="{{ success ? 'notifier-text n-success' : 'notifier-text' }}">
+        {{ success }}
+      </div>
+    </div>
+  </div>
+</div>

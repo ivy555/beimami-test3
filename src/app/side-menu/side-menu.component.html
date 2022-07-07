@@ -1,0 +1,32 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+<div class="container left-side">
+  <h2>{{pageTitle}}</h2>
+  <div class="side-menu">
+    <a class="nav-link clickable" (click)="redirect('/dashboard/edit-profile')">
+      <i class="fa fa-user" aria-hidden="true"></i> Edit Profile</a 
+    >
+    <a class="nav-link clickable" (click)="redirect('/dashboard/messages')">
+      <i class="fa fa-comments" aria-hidden="true"></i> Messages</a
+    >
+    <a class="nav-link clickable" (click)="redirect('/wishlist');">
+      <i class="fa fa-gift" aria-hidden="true"></i> Wishlist</a>
+          <a class="nav-link clickable" (click)="redirect('/dashboard/your-reviews');">
+            <i class="fa fa-file-text" aria-hidden="true"></i> Your Reviews</a>
+          <a class="nav-link clickable" (click)="redirect('/dashboard/your-ratings');">
+            <i class="fa fa-star" aria-hidden="true"></i> Your Ratings</a>
+    <a class="nav-link clickable" (click)="redirect('/dashboard/history')"
+      ><i class="fa fa-history" aria-hidden="true"></i> History</a
+    >
+    <a class="nav-link clickable" (click)="redirect('/dashboard/items-sale')"
+      ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Items for Sale</a
+    >
+    <a class="nav-link clickable" (click)="redirect('/dashboard/settings')"
+      ><i class="fas fa-cog" aria-hidden="true"></i> Settings</a>
+
+    <hr />
+    <a class="nav-link clickable" (click)="redirect('/post-item')"
+      ><i class="fa fa-clipboard" aria-hidden="true"></i> Post an Item</a
+    >
+  </div>
+</div>

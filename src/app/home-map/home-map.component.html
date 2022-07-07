@@ -1,0 +1,64 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+<div class="background">
+    <app-location></app-location>
+    <div class="wrapper">
+
+        <div class="side-menu-left">
+            <div class="checkbox"> 
+               <a for="name"><i class="fas fa-caret-down" aria-hidden="true"></i>  Was ist dir wichtig?</a >
+
+                <!-- <input type="checkbox" id="food-category" name="vegetarian" value="vegetarian">
+                <label for="vegetarian"> Vegetarisch</label><br>
+                
+                <input type="checkbox" id="food-category" name="vegan" value="vegan">
+                <label for="vegan"> Vegan</label><br>
+
+                <input type="checkbox" id="food-category" name="lactose-free" value="lactose-free">
+                <label for="lactose-free"> Laktosefrei</label><br>
+
+                <input type="checkbox" id="food-category" name="gluten-free" value="gluten-free">
+                <label for="gluten-free"> Glutenfrei</label><br>
+
+                <input type="checkbox" id="food-category" name="low-carb" value="low-carb">
+                <label for="low-carb"> Low Carb</label><br>
+
+                <input type="checkbox" id="food-category" name="basisch" value="basisch">
+                <label for="basisch"> Basisch</label><br> -->
+              </div>
+        </div> 
+
+        <div class="side-menu-right">
+            <!-- <a class="nav-link clickable" (click)="redirect('/dashboard/edit-profile')">
+                <i class="fa fa-user" aria-hidden="true"></i> Profile</a >
+
+            <a class="nav-link clickable" (click)="redirect('/dashboard/messages')">
+                <i class="fas fa-heart" aria-hidden="true"></i> Favoriten</a >
+
+            <a class="nav-link clickable" (click)="redirect('/wishlist');">
+                <i class="fas fa-list-ul" aria-hidden="true"></i> Bestellungen</a>
+
+            <a class="nav-link clickable" (click)="redirect('/dashboard/your-reviews');">
+                <i class="far fa-star" aria-hidden="true"></i> Bewertungen</a>
+
+            <a class="nav-link clickable" (click)="redirect('/dashboard/your-ratings');">
+                <i class="fa fa-comments" aria-hidden="true"></i> Nachrichten</a>
+            
+            <a class="nav-link clickable" (click)="redirect('/dashboard/history')">
+                <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i> Abrechnung</a>
+
+            <a class="nav-link clickable" (click)="redirect('/dashboard/items-sale')">
+                <i class="fas fa-user-cog" aria-hidden="true"></i> Einstellungen</a -->
+                >
+          <!-- <a class="nav-link clickable" (click)="redirect('/dashboard/settings')"
+            >Settings</a> -->
+
+        </div>
+          <div class="map-container">
+
+         </div>
+        <div id="map-container"><div id="choose-region">Region auswählen</div><ul id="map-holder"><li class="map-marker location" data-location-id="51" id="map-marker-ostseekuste" style="left: 139.999999999999060404833981410375090080769230769230769303px; top: 20.000000000002041253648799222353931446055879684px;" title="Ostseeküste"><a href="/honige/honigsorten/aus/ostseekuste">Ostseeküste</a></li><li class="map-marker location" data-location-id="62" id="map-marker-sachsen" style="left: 279.999999999998977247909411684364326048351648351648351583px; top: 220.000000000000795393450569503402267357540484693499711972px;" title="Sachsen"><a href="/honige/honigsorten/aus/sachsen">Sachsen</a></li><li class="map-marker location" data-location-id="63" id="map-marker-odenwald" style="left: 94.999999999999955610599419822312563988571428571428571518px; top: 289.999999999998964211456822361193870037712905058109706338px;" title="Odenwald und Frankfurt"><a href="/honige/honigsorten/aus/odenwald">Odenwald und Frankfurt</a></li><li class="map-marker location" data-location-id="61" id="map-marker-sachsen-anhalt" style="left: 219.99999999999903034341054540613645707681318681318681329px; top: 184.277777777777694745370370370404967212px;" title="Sachsen-Anhalt"><a href="/honige/honigsorten/aus/sachsen-anhalt">Sachsen-Anhalt</a></li><li class="map-marker location" data-location-id="67" id="map-marker-heilbronner-land-hohenlohe" style="left: 139.780219780219780219780219622px; top: 330.805555555555411469907407407467443128px;" title="Heilbronner Land und Hohenlohe"><a href="/honige/honigsorten/aus/heilbronner-land-hohenlohe">Heilbronner Land und Hohenlohe</a></li><li class="map-marker location" data-location-id="49" id="map-marker-oberbayern" style="left: 219.999999999999010989010989010989011075px; top: 389.416666666666498159722222222292433832px;" title="Oberbayern"><a href="/honige/honigsorten/aus/oberbayern">Oberbayern</a></li><li class="map-marker location" data-location-id="66" id="map-marker-franken-oberpfalz" style="left: 179.999999999999032967032967032967032912px; top: 310.00000000000194791666666666585503509px;" title="Franken und Oberpfalz"><a href="/honige/honigsorten/aus/franken-oberpfalz">Franken und Oberpfalz</a></li><li class="map-marker location" data-location-id="57" id="map-marker-luneburger-heide" style="left: 144.999999999999912087912087912087912026px; top: 129.999999999999967361111111111124710478px;" title="Lüneburger Heide"><a href="/honige/honigsorten/aus/luneburger-heide">Lüneburger Heide</a></li><li class="map-marker location" data-location-id="59" id="map-marker-schwarzwald" style="left: 83.027472527472527472527472469px; top: 383.555555555555389490740740740809934424px;" title="Schwarzwald und aus Südbaden"><a href="/honige/honigsorten/aus/schwarzwald">Schwarzwald und aus Südbaden</a></li><li class="map-marker location" data-location-id="50" id="map-marker-berlin-brandenburg" style="left: 277.362637362637362637362637655px; top: 143.249999999999934062500000000027473888px;" title="Berlin-Brandenburg"><a href="/honige/honigsorten/aus/berlin-brandenburg">Berlin-Brandenburg</a></li><li class="map-marker location" data-location-id="55" id="map-marker-allgau" style="left: 150.000000000000769230769230769230769303px; top: 419.999999999999902083333333333374131856px;" title="Allgäu"><a href="/honige/honigsorten/aus/allgau">Allgäu</a></li><li class="map-marker location" data-location-id="73" id="map-marker-eifel" style="left: 14.999999999999985672022855826551196992527472469px; top: 270.00000000000204564212231812654716651736744727201395114px;" title="Eifel"><a href="/honige/honigsorten/aus/eifel">Eifel</a></li><li class="map-marker location active" data-location-id="79" id="map-marker-mitte-deutschlands" style="left: 164.999999999999914032137134959307181955164835164835164873px; top: 224.999999999998671550559063649565503422056812681040240612px;" title="Mitte Deutschlands"><a href="/honige/honigsorten/aus/mitte-deutschlands">Mitte Deutschlands</a></li><li class="map-marker location" data-location-id="64" id="map-marker-nordseekuste" style="left: 76.241758241758356043956043956043956326px; top: 53.444444444441999259259259260278086536px;" title="Nordseeküste"><a href="/honige/honigsorten/aus/nordseekuste">Nordseeküste</a></li><li class="map-marker location" data-location-id="77" id="map-marker-harz" style="left: 170.000000000000744625362590790705775805054945054945055062px; top: 184.99999999999900401399717924950958635700864603767235134px;" title="Harz und südlichem Niedersachen"><a href="/honige/honigsorten/aus/harz">Harz und südlichem Niedersachen</a></li><li class="map-marker location" data-location-id="94" id="map-marker-wittstocker-heide" style="left: 213.335838901098901098901098736px; top: 82.501986388888848263061226851868779194px;" title="Wittstocker Heide"><a href="/honige/honigsorten/aus/wittstocker-heide">Wittstocker Heide</a></li><li class="map-marker location" data-location-id="87" id="map-marker-mecklenburg" style="left: 247.731443296703296703296703166px; top: 55.333333333333304027777777777789988254px;" title="Mecklenburg"><a href="/honige/honigsorten/aus/mecklenburg">Mecklenburg</a></li><li class="map-marker location" data-location-id="70" id="map-marker-ruhrgebiet" style="left: 64.999999999999956043956043956043956326px; top: 195.000000000000356944444444444295717496px;" title="Ruhrgebiet"><a href="/honige/honigsorten/aus/ruhrgebiet">Ruhrgebiet</a></li><li class="map-marker location" data-location-id="89" id="map-marker-sauerland" style="left: 103.664835164835164835164835127px; top: 214.9999999999973208333333333344496528px;" title="Sauerland"><a href="/honige/honigsorten/aus/sauerland">Sauerland</a></li><li class="map-marker location" data-location-id="99" id="map-marker-heidelberg-nordbaden" style="left: 95.065934065934065934065934176px; top: 336.666666666666520138888888888949942536px;" title="Heidelberg und Nordbaden"><a href="/honige/honigsorten/aus/heidelberg-nordbaden">Heidelberg und Nordbaden</a></li><li class="map-marker location" data-location-id="101" id="map-marker-main-tauber-kreis" style="left: 139.780219780219780219780219622px; top: 295.63888888888875945601851851857244879px;" title="Main-Tauber-Kreis"><a href="/honige/honigsorten/aus/main-tauber-kreis">Main-Tauber-Kreis</a></li><li class="map-marker location" data-location-id="81" id="map-marker-rheinlandpfalz-saarland" style="left: 36.593406593406593406593406645px; top: 319.083333333333194131944444444502445156px;" title="Rheinlandpfalz und Saarland"><a href="/honige/honigsorten/aus/rheinlandpfalz-saarland">Rheinlandpfalz und Saarland</a></li><li class="map-marker location" data-location-id="65" id="map-marker-havelland" style="left: 236.087912087912087912087912026px; top: 143.249999999999934062500000000027473888px;" title="Havelland"><a href="/honige/honigsorten/aus/havelland">Havelland</a></li><li class="map-marker location" data-location-id="104" id="map-marker-isar-donau-huegelland-oberpfalz" style="left: 194.81318681318681318681318671px; top: 348.388888888888737476851851851914940086px;" title="Isar-Donau-Hügelland und der Oberpfalz"><a href="/honige/honigsorten/aus/isar-donau-huegelland-oberpfalz">Isar-Donau-Hügelland und der Oberpfalz</a></li><li class="map-marker location" data-location-id="103" id="map-marker-bodensee-obere-donau" style="left: 115.703296703296703296703296834px; top: 404.069444444444269832175925925998681086px;" title="Bodensee und Obere Donau"><a href="/honige/honigsorten/aus/bodensee-obere-donau">Bodensee und Obere Donau</a></li><li class="map-marker location" data-location-id="78" id="map-marker-westerwald-siegerland" style="left: 110.000000000000103296703296703296703166px; top: 249.99999999999933402777777777805526609px;" title="Westerwald &amp; Siegerland"><a href="/honige/honigsorten/aus/westerwald-siegerland">Westerwald &amp; Siegerland</a></li></ul><div class="pull-right" id="close_map"><button class="btn btn-default">schließen</button></div><div class="location  active" id="remove_selection"><a href="/honige">Alle Regionen auswählen &gt;</a></div></div>
+    </div>   
+
+
+</div>

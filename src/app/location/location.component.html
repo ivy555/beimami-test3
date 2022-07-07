@@ -1,0 +1,27 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+<div class="background">
+    <div class="navigation_bar" style="overflow: hidden;">
+      <img class="top_left_logo" src="/../../../assets/imgs/logo-white.png">
+      
+      <div class="search-container">
+        <div class="nopadding row container search-wrapper">
+          <div class="col-12 nopadding">
+            <form class="nopadding search-form">
+              <input class="nopadding" type="text"
+               (input)="search();"
+               #searchInput
+               placeholder='&#xf124; Hauptstraße 1, 60437 Frankfurt am Main'>
+              <button class="nopadding clickable" (click)="search();">
+                <fa name="fa-solid fa-location-arrow"></fa>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="top_text">Hier treffen Genießer auf lokale Hobby-Köche.</div>
+    
+    </div>
+</div>
+
+

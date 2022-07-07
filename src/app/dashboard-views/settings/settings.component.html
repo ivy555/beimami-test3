@@ -1,0 +1,90 @@
+<div class="background">
+
+<div class="navigation_bar" style="overflow: hidden;">
+  <img class="top_left_logo" src="/../../../assets/imgs/logo-white.png">
+  <div class="top_text">Hier treffen Genießer auf lokale Hobby-Köche.</div>
+  <img class="top_cook_logo" src="/../../../assets/imgs/logo-white1.png">
+</div>
+
+<div class="container parent-container">
+  <div class="row">
+    <div class="col-lg-3 col-3">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="col-lg-9 col-12">
+      <form class="update-profile" [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-12 form-group">
+            <label>Name : <strong>{{ data.name }}</strong></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 form-group">
+            <label for="email">Email: <strong>{{ data.email }}</strong></label>
+          </div>
+      
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-12 form-group">
+            <label for="oldpassw">Old Password</label>
+            <input ng-minlength="6" type="password" class="form-control" id="oldpassw"
+              formControlName="op" placeholder="Old Password" />
+          </div>
+          <div class="col-md-6 col-12 form-group">
+            <label for="newpassw">New Password</label>
+            <input ng-minlength="6" type="password" class="form-control" id="newpassw" formControlName="np"
+              placeholder="New Password" />
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-12 form-group">
+            <label for="confpassw">Confirm Password</label>
+            <input ng-minlength="6" type="password" class="form-control" id="confpassw" formControlName="cp"
+              placeholder="Confirm Password" />
+          </div>
+
+          <!-- <div class="col-md-6 col-12 form-group">
+            <select>
+              <option>Deutsch</option>
+              <option>English</option>
+              <option>Türkce</option>
+            </select>
+          </div> -->
+
+        </div>
+
+
+
+        <br />
+        <div class="row">
+          <div class="col-lg-4 col-6 form-group mx-auto">
+            <button type="submit" class="btn update" [disabled]="settingsForm.invalid" style="width: 100%;">
+              Update
+            </button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="dummy">
+  <div class="{{error ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'}}" *ngIf="error">
+    <div class="notifier-wrapper">
+      <div class="notifier-text">
+        {{ error }}
+      </div>
+    </div>
+  </div>
+
+  <div class="{{success ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'}}" *ngIf="success">
+    <div class="notifier-wrapper">
+      <div class="{{success ? 'notifier-text n-success' : 'notifier-text'}}">
+        {{ success }}
+      </div>
+    </div>
+  </div>
+</div>
+</div>

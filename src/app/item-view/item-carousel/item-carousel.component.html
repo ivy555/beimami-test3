@@ -1,0 +1,20 @@
+<div
+  class="container nopadding"
+  style="box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75); border-radius: 8px;"
+>
+  <div class="col-12 nopadding">
+    <ngb-carousel>
+      <ng-template ngbSlide *ngFor="let item of data">
+        <div class="image"> <img
+          [src]="item.location"
+          onerror="this.src='../../../assets/imgs/missing.png';"
+          alt="Image Not Found"
+        />
+      </div>
+        <!-- <div class="carousel-caption">
+          <p>Description: {{ item.name }}</p>
+        </div> -->
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>

@@ -1,0 +1,447 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+/* ::selection{
+  background-color: rgb(63, 163, 43);
+  color: white;
+} */
+
+.home-img-container {
+  z-index: -1;
+  height: -webkit-calc(100vh - 137px);
+  height: calc(100vh - 137px);
+  margin-top: 84px !important;
+}
+
+.home-img,
+.home-invite {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/imgs/homepage4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  z-index: 0;
+}
+
+.home-invite {
+  background-image: url('../../assets/imgs/footer-img.jpg');
+  background-position: center;
+}
+
+.text-invite {
+  line-height: 1em;
+  padding-left: 48px;
+  font-family: 'Montserrat-Local', 'Montserrat';
+  font-size: 1.75em;
+  color: #FFF;
+  font-weight: 700;
+  padding: 16px 32px;
+  display: inline-block;
+  z-index: 9999;
+}
+
+.text-invite.clickable {
+  background: -o-linear-gradient(135deg, #541AD3 15%, #D35ED8 85%);
+  background: linear-gradient(-45deg, #541AD3 15%, #D35ED8 85%);
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  color: #FFF;
+  -webkit-animation: glowing 3000ms infinite;
+  animation: glowing 3000ms infinite;
+}
+
+footer {
+  /* display: none;  */
+  /* position: fixed; */
+  padding: 16px 32px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  /* padding: 12px; */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.popular-dishes-background{
+  background-image: url('/../../../assets/imgs/background-wood.jpg');
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  height: 550px;
+  border-top: 2px solid white;
+}
+
+.beimami-appstore{
+  background-image: url('/../../../assets/imgs/pasta.jpg');
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  height: 420px;
+  border: 2px solid white;
+  
+}
+
+.fa-3x {
+  font-size: 3em;
+  width: 46px;
+  height: 46px
+}
+
+.app-text-big{
+  font-family: arial black;
+  font-size: 3.7rem;
+  color: #FFF;
+  text-shadow: 2px 1px #000000;
+}
+
+.app-text-small{
+  font-family: arial black;
+  font-size: 1rem;
+  color: #FFF;
+  text-shadow: 2px 1px #000000;
+}
+
+.btn-store {
+  color: #ffffff;
+  min-width: 254px;
+  padding: 12px 20px !important;
+  background-color: #0091ff;
+  border-color: #ffffff !important;
+  border-radius: 15px;
+  /* margin-left: 15px; */
+  /* margin-top: 15px; */
+}
+
+.btn-store:focus, 
+.btn-store:hover {
+  color: #ffffff !important;
+  background-color: #000000;
+  border-color: #ffffff !important;
+  border-radius: 15px;
+}
+
+.btn-store .btn-label, 
+.btn-store .btn-caption {
+  display: block;
+  text-align: left;
+  line-height: 1;
+}
+
+.btn-store .btn-caption {
+  font-size: 24px;
+}
+
+.btn-caption-black{
+  color: #000000;
+  text-shadow: 2px 1px #ffffff;
+}
+
+.bg-footer-icon{
+  background-color: #D35ED8;
+  /* background-image: url('/../../../assets/imgs/homepage4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; */
+}
+
+/* center icons for social media on bottom*/
+.icons{
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-appstore{
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.app-buttons{
+  margin-left: 10%;
+}
+
+/* align smartphone icon to the right and center */
+.app-download-img{
+  background-image: url('/../../../assets/imgs/mobile-mockup2.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 320px;
+  width: 170px;
+  /* margin-top: 40px; */
+  margin-left: 32%;
+ 
+  /* filter: invert(100%); */
+  /* float: right; 
+  position: relative;
+  top: -200px; */
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    -webkit-box-shadow: 0 0 -10px #D35ED8;
+    box-shadow: 0 0 -10px #D35ED8;
+  }
+
+  40% {
+    -webkit-box-shadow: 0 0 20px #D35ED8;
+    box-shadow: 0 0 20px #D35ED8;
+  }
+
+  60% {
+    -webkit-box-shadow: 0 0 20px #D35ED8;
+    box-shadow: 0 0 20px #D35ED8;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 -10px #D35ED8;
+    box-shadow: 0 0 -10px #D35ED8;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    -webkit-box-shadow: 0 0 -10px #D35ED8;
+    box-shadow: 0 0 -10px #D35ED8;
+  }
+
+  40% {
+    -webkit-box-shadow: 0 0 20px #D35ED8;
+    box-shadow: 0 0 20px #D35ED8;
+  }
+
+  60% {
+    -webkit-box-shadow: 0 0 20px #D35ED8;
+    box-shadow: 0 0 20px #D35ED8;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 -10px #D35ED8;
+    box-shadow: 0 0 -10px #D35ED8;
+  }
+}
+
+.home-img:before,
+.home-invite:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -o-linear-gradient(55deg, rgba(255, 102, 39, 0.25) 25%, rgba(26, 31, 38, 0.8) 75%);
+  background: linear-gradient(35deg, rgba(255, 102, 39, 0.25) 25%, rgba(26, 31, 38, 0.8) 75%);
+}
+
+.home-invite:before {
+  background: rgba(26, 31, 38, 0.6);
+}
+
+.text-img {
+  line-height: 1em;
+  padding-left: 48px;
+  border-left: 16px solid rgb(255, 102, 39);
+  -webkit-border-image: --webkit-gradient(linear,
+      left top, left bottom,
+      color-stop(60%, rgb(255, 102, 39)),
+      to(rgba(0, 0, 0, 0))) 1 100%;
+  -webkit-border-image: linear-gradient(to bottom,
+      rgb(255, 102, 39) 60%,
+      rgba(0, 0, 0, 0)) 1 100%;
+  -o-border-image: -o-linear-gradient(top,
+      rgb(255, 102, 39) 60%,
+      rgba(0, 0, 0, 0)) 1 100%;
+  border-image: --webkit-gradient(linear,
+      left top, left bottom,
+      color-stop(60%, rgb(255, 102, 39)),
+      to(rgba(0, 0, 0, 0))) 1 100%;
+  border-image: linear-gradient(to bottom,
+      rgb(255, 102, 39) 60%,
+      rgba(0, 0, 0, 0)) 1 100%;
+  font-family: 'Montserrat-Local', 'Montserrat';
+  font-size: 4em;
+  color: #FFF;
+  font-weight: bolder;
+  z-index: 999;
+}
+
+.mini-text-img {
+  display: block;
+  font-size: 0.5em !important;
+  line-height: 1em;
+  color: rgb(255, 102, 39);
+  background: -webkit-linear-gradient(180deg, rgb(231, 70, 0), rgb(255, 187, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title {
+  /* margin: 32px 0 16px 0; */
+  font-weight: bold;
+  color: rgb(221, 221, 221);
+}
+
+.section-title small {
+  font-size: 14px;
+  color: rgb(255, 102, 39) !important;
+}
+
+.section-title small:hover {
+  text-decoration: underline;
+}
+npx cap init
+.wrapper {
+  width: 100% !important;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.btn-danger {
+  margin-left: 50px;
+  width: 150px;
+  font-style: italic;
+  font-weight: bold;
+  border: 0 solid white !important;
+  background: orange !important;
+}
+
+.bottom-wrapper {
+  margin: 0 auto !important;
+  overflow-x: scroll;
+  height: auto !important;
+  padding-bottom: 32px !important;
+  padding-top: 5px !important;
+}
+
+.title-container {
+  margin: 0 auto !important;
+
+}
+ /*changed Display of Items on home menu*/
+.nopadding{
+  display: flex;
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 11px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1A1F26;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888888;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4e5864;
+}
+
+.home-invite-container {
+  /* position: relative; */
+  height: 260px;
+  top: 96px;
+  bottom: 24px !important;
+}
+
+
+
+/* Small devices (landscape phones, 368px and up) */
+@media (max-width: 368px) {
+  .text-img {
+    padding-left: 24px;
+    border-left: 8px solid rgb(255, 102, 39);
+    font-size: 2em;}
+
+  .btn-store {
+    min-width: 220px;
+  }
+  
+
+  .text-invite {
+    font-size: 1.25em;
+    padding: 16px 32px;
+  }
+
+  .wrapper-appstore{
+    margin-left: 0%;
+  }
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .title-container {
+    padding-left: 16px !important;
+  }
+
+  .app-text-big{
+    font-size:xxx-large;
+  }
+
+  .deals-container .wrapper {
+    padding-left: 16px !important;
+  }
+
+  ::-webkit-scrollbar {
+    height: 6px;
+  }
+}
+
+/* Medium devices (tablets, 880px and up) */
+@media (max-width: 880px) {
+  .app-download-img{
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+
+  
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+
+  .app-download-img{
+    margin-left: 25%;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {}

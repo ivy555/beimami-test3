@@ -1,0 +1,19 @@
+.top {
+  display: flex;
+  flex-direction: row;
+}
+
+.rating {
+  display: block;
+  margin-left: auto;
+  color: rgb(255, 115, 21);
+  font-weight: 700;
+}
+
+.feedback-desc {
+    text-align: justify;
+}
+
+hr {
+  border-color: #272D35;
+}

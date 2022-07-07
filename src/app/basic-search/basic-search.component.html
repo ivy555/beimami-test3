@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Search</h1>
+    <form (ngSubmit)="onSubmit()" #basicSearchForm="ngForm">
+        <div class="form-group">
+            <input type="text" class="form-control" id="query" [(ngModel)]="model.query" name="query" placeholder="Search here...">
+        </div>
+    </form>
+</div>
+<div class="container">
+    <div class="spinner-border" role="status" *ngIf="show_loader">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <div class="row" *ngFor="let product of products">
+        <div class="col-3">
+            <img class="img-thumbnail" src="../assets/imgs/default-image.jpg" />
+        </div>
+        <div class="col-6">
+            <h3>{{product.name}}</h3>
+            <p>{{product.price}}</p>
+            <p>{{product.description}}</p>
+        </div>
+    </div>
+</div>

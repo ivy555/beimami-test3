@@ -1,0 +1,97 @@
+
+
+<div class="background"></div>
+
+<div class="navigation_bar" style="overflow: hidden;">
+  <img class="top_left_logo" src="/../../../assets/imgs/logo-white.png">
+  <div class="top_text">Hier treffen Genießer auf lokale Hobby-Köche.</div>
+  <img class="top_cook_logo" src="/../../../assets/imgs/logo-white1.png">
+</div>
+
+
+<div class="container parent-container">
+  <div class="row">
+    <div class="col-lg-3 col-0">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="col-lg-9 col-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Item Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Price</th>
+            <th scope="col">Caution</th>
+            <th scope="col">Used/New</th>
+            <th scope="col">Approved</th>
+            <th scope="col">Sold</th>
+            <th scope="col">Operations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data">
+            <td>{{ item.item_name | titlecase }}</td>
+            <td>{{ item.sale_rent | titlecase }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.security_amount ? item.security_amount : " " }}</td>
+            <td>{{ item.used_new ? item.used_new : " " }}</td>
+            <td>{{ item.approved ? "Yes" : "No" }}</td>
+            <td>{{ item.sold ? "Yes" : "No" }}</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button
+                  type="button"
+                  class="btn btn-sm btn-view"
+                  (click)="navigateToDetails($event, item)"
+                >
+                  View
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-update"
+                  (click)="updateItem(item)"
+                >
+                  Update
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-delete"
+                  (click)="deleteItem(item.id)"
+                >
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="dummy">
+  <div
+    class="{{
+      error ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+    }}"
+    *ngIf="error"
+  >
+    <div class="notifier-wrapper">
+      <div class="notifier-text">
+        {{ error }}
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="{{
+      success ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+    }}"
+    *ngIf="success"
+  >
+    <div class="notifier-wrapper">
+      <div class="{{ success ? 'notifier-text n-success' : 'notifier-text' }}">
+        {{ success }}
+      </div>
+    </div>
+  </div>
+</div>

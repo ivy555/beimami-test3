@@ -1,0 +1,112 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+.right-side {
+  position: fixed;
+  width: 256px;
+}
+
+.side-menu {
+  background: #1a1f26;
+  padding: 16px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+.side-menu p {
+  color: #b4b4b4;
+}
+
+.menu-title {
+  color: #d3d3d3;
+  margin-bottom: 16px;
+}
+
+.btn {
+  width: 100%;
+  background: #541ad3 !important;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  position: relative;
+  bottom: 0;
+  color: #fff;
+}
+
+.btn:hover {
+  position: relative;
+  bottom: 2px;
+  background: rgb(100, 28, 255) !important;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+.btn-delete {
+  margin-top: 12px;
+  background: rgb(180, 6, 6) !important;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.btn-delete:hover {
+  background: rgb(223, 6, 6) !important;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+/* Small devices (landscape phones, 368px and up) */
+@media (max-width: 368px) {
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .right-side {
+    width: -webkit-calc(100vw - 48px) !important;
+    width: calc(100vw - 48px) !important;
+    /* or whatever position is desired */
+    left: 24px;
+    right: 0;
+    /* center all inline content */
+    text-align: center;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    padding-bottom: 26px !important;
+    background: #272d35;
+    -webkit-box-shadow: 0 0 0 black;
+    box-shadow: 0 0 0 black;
+  }
+
+  .side-menu {
+    width: -webkit-calc(100vw - 48px);
+    width: calc(100vw - 48px);
+    -webkit-box-shadow: 0 0 0 black;
+    box-shadow: 0 0 0 black;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: #272d35;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+  }
+
+  .menu-title {
+    display: none;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+}

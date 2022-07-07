@@ -1,0 +1,160 @@
+
+<div class="background">
+  <div class="navigation_bar" style="overflow: hidden;">
+    <img class="top_left_logo" src="/../../../assets/imgs/logo-white.png">
+    <div class="top_text">Hier treffen Genießer auf lokale Hobby-Köche.</div>
+    <img class="top_cook_logo" src="/../../../assets/imgs/logo-white1.png">
+  </div>
+  
+  
+  
+  <div class="container parent-container">
+    <form>
+      <div class="row nopadding">
+        <h3 class="title nopadding">{{ itemId ? "Update " : "Post " }}Item</h3>
+      </div>
+      <div class="row rest">
+        <div class="col-md-3 col-12 nopadding">
+          <div class="form-group file-upload upload-button">
+            <label for="custom-input">Upload your images</label>
+            <input
+              type="file"
+              class="form-control-file image-upload"
+              multiple
+              id="files-input"
+              name="files"
+              (change)="ImageSelected($event)"
+            />
+          </div>
+        </div>
+        <div class="col-md-9 col-12">
+          <div class="row">
+            <div class="col-md-6 col-12 form-group">
+              <label for="itemName">Item Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="itemName"
+                placeholder="Item Name"
+                name="item_name"
+                [(ngModel)]="ad.item_name"
+              />
+            </div>
+            <div class="col-md-6 col-12 form-group">
+              <label for="country">Category</label>
+              <select
+                type="number"
+                class="form-control"
+                id="itemCategory"
+                [(ngModel)]="ad.categoryId"
+                name="categoryId"
+              >
+                <option
+                  *ngFor="let category of categories"
+                  value="{{ category.id }}"
+                  selected
+                >
+                  {{ category.name }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 form-group">
+              <label for="itemDesc">Item Description</label>
+              <textarea
+                class="form-control"
+                id="itemDesc"
+                rows="5"
+                [(ngModel)]="ad.item_description"
+                name="item_description"
+                placeholder="Write a few words about your item here"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-12 form-group">
+              <label for="itemPrice">Price</label>
+              <input
+                type="number"
+                [(ngModel)]="ad.price"
+                name="price"
+                class="form-control"
+                id="itemPrice"
+                placeholder="&euro;"
+              />
+            </div>
+            <div class="col-md-4 col-sm-6 col-12 form-group">
+              <!-- <label for="sale_rent">Sale/rent</label> -->
+              <label for="sale_rent">Sale</label>
+              <select
+                class="form-control"
+                id="itemSaleRent"
+                [(ngModel)]="ad.sale_rent"
+                name="sale_rent"
+              >
+                <option selected>Sale</option>
+                <!-- <option> Rent </option> -->
+              </select>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-12 form-group">
+              <!-- <label for="itemCondition">Condition</label> -->
+              <label for="itemCondition">Was ist dir wichtig?</label>
+              <select
+                class="form-control"
+                id="itemCondition"
+                [(ngModel)]="ad.used_new"
+                name="used_new"
+              >
+                <!-- <option selected>New</option>
+                <option>Used</option> -->
+                <option selected>Vegetarian</option>
+                <option>Vegan</option>
+                <option>Non-Vegetarian</option>
+                <option>Pescatarian</option>
+  
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-6 form-group mx-auto">
+              <button type="submit" class="btn post-item" (click)="saveAd()">
+                Post Item
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="dummy">
+    <div
+      class="{{
+        error ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+      }}"
+      *ngIf="error"
+    >
+      <div class="notifier-wrapper">
+        <div class="notifier-text">
+          {{ error }}
+        </div>
+      </div>
+    </div>
+  
+    <div
+      class="{{
+        success ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+      }}"
+      *ngIf="success"
+    >
+      <div class="notifier-wrapper">
+        <div class="{{ success ? 'notifier-text n-success' : 'notifier-text' }}">
+          {{ success }}
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  </div>
+  

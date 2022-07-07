@@ -1,0 +1,30 @@
+      <div class="container left-side">
+
+        <div class="side-menu"> <!--
+          <h5 class="menu-title">Filter</h5>
+          <div class="form-group">
+            
+            <div class="form-check">
+              <input class="clickable form-check-input" type="checkbox" id="forSale" checked>
+              <label class="clickable form-check-label" for="forSale">
+                Items for Sale
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="clickable form-check-input" type="checkbox" id="forRent" checked>
+              <label class="clickable form-check-label" for="forRent">
+                Items for Rent
+              </label>
+            </div>
+          </div>
+          <hr /> -->
+          <div class="categories">
+            <h5 class="menu-title">Categories</h5>
+            <ul class="nopadding categories-list">              
+              <li class="clickable nopadding" 
+              (click)="getItems(c.id)"
+              *ngFor="let c of categories; let i = index"> {{c.name}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,43 @@
+<div class="container parent-container">
+
+  <app-search-bar></app-search-bar>
+
+</div>
+
+
+<div class="background"></div>
+
+
+<div class="row container nopadding cart-container">
+  <div class="nopadding items-wrapper">
+    <app-cart-item 
+      *ngFor="let ad of localsotrageitem; let i = index"
+      item_id="{{ad.id}}" 
+      item_price="{{ad.price}}" 
+      item_title="{{ad.item_name}}"
+      item_description="{{ad.item_description}}"
+      thumbnail="{{ad.thumbnail}}">
+    </app-cart-item>
+  </div>
+  <div class="cart-wrapper nopadding">
+    <app-cart-finalize></app-cart-finalize>
+  </div>
+</div>
+<div class="dummy">
+<div class="{{error ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'}}" *ngIf="error">
+  <div class="notifier-wrapper">
+    <div class="notifier-text">
+      {{ error }}
+    </div>
+  </div>
+</div>
+
+<div class="{{success ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'}}" *ngIf="success">
+  <div class="notifier-wrapper">
+    <div class="{{success ? 'notifier-text n-success' : 'notifier-text'}}">
+      {{ success }}
+    </div>
+  </div>
+</div>
+</div>
+

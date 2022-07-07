@@ -1,0 +1,245 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+.conversation-wrapper {
+  margin: 80px 0;
+  width: 100%;
+  color: #EEE;
+}
+
+.conversation-box {
+  position: relative;
+  bottom: 0;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: #1A1F26;
+  color: #e4e4e4;
+  padding: 12px;
+  height: auto;
+  margin-bottom: 24px;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+  overflow: auto;
+}
+
+.conversation-header {
+  background: #1A1F26;
+  padding: 12px 12px 0px 12px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.conversation-person {
+  color: #FF6627;
+  font-weight: 600;
+}
+
+.conversation-item {
+  float: right;
+  color: rgb(100, 28, 255);
+  font-weight: 600;
+}
+
+.conversation-text {
+  margin-top: 12px;
+}
+
+.conversation-messages {
+  width: 100%;
+  height: 100%;
+  background: #272D35;
+  padding: 12px;
+  min-height: 300px !important;
+  max-height: 300px !important;
+  overflow: auto;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.message {
+  max-width: 70%;
+  min-width: 70%;
+  padding: 12px !important;
+  word-wrap: break-word;
+  float: left;
+  margin: 12px 0 !important;
+  font-size: 0.9em;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  text-align: justify;
+  background: #272D35;
+  color: #EEE;
+}
+
+.message span {
+  color: #d4d4d4;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.sender-name {
+  float: left;
+}
+
+.message-date {
+  float: right;
+}
+
+.receiver {
+  background: #1A1F26;
+  float: left;
+}
+
+.sender {
+  background: rgb(18, 21, 26);
+  float: right;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1A1F26;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888888;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4e5864;
+}
+
+textarea {
+  margin: 12px 0px;
+  background-color: #272D35;
+  border: 0px solid white;
+  color: #d4d4d4;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+
+  background-color: rgb(47, 55, 66);
+  border: 0px solid white;
+  color: #FFF;
+}
+
+.send-message {
+  color: #FFF;
+  position: relative;
+  bottom: 0px;
+  background: #541AD3 !important;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  min-width: 156px;
+  width: 50%;
+  display: block;
+  margin: 0px auto;
+}
+
+.send-message:hover {
+  position: relative;
+  bottom: 1px;
+  background: rgb(100, 28, 255) !important;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+
+.navigation_bar{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.6);
+  width: 100%;
+  padding-top: 50px;
+  height: 180px;
+  color: rgb(255, 255, 255);
+}
+
+.top_left_logo {
+  min-width: 180px;
+  vertical-align: top;
+  margin-right: 10px;
+  max-width: 40%;
+  max-height: 90%;
+}
+
+.top_text {
+  font-weight: bold;
+}
+
+.top_cook_logo{
+  min-width: 100px;
+  max-width: 20%;
+  max-height: 30%;
+  margin-left: 10px;
+}
+
+.background{
+  background-image: url('/../../../assets/imgs/homepage4.jpg');
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: -webkit-fill-available;
+  overflow:auto;
+}
+
+
+/* Small devices (landscape phones, 368px and up) */
+@media (max-width: 368px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .conversation-wrapper {
+    margin-top: 24px !important;
+  }
+
+  .message {
+    max-width: 80%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .conversation-wrapper {
+    margin-top: 24px !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  .conversation-wrapper {
+    margin-top: 48px !important;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {}

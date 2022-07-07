@@ -1,0 +1,24 @@
+<div
+  class="row nopadding wishlist-item clickable"
+  [routerLink]="'/item-view'"
+  [queryParams]="{ itemId: item_id }"
+>
+  <div class="left-side nopadding">
+    <img class="item-img" src="{{ img_link }}"/>
+  </div>
+  <div class="middle-side nopadding">
+    <h4 class="item-title">{{ item_title }}</h4>
+        
+          <span class="for-buy" *ngIf="item_sold == 'false'">Buy for &euro;{{ item_price }}</span>
+        
+          <!-- <div class="bottom-right-item" *ngIf="item_sold == 'false'">
+                  <span class="for-rent">Rent for &euro;{{ item_price }}</span>
+                </div> -->
+        
+          <span class="for-rent" *ngIf="item_sold == 'true'">Sold</span>
+    <!--    
+    <small class="item-category"> {{ item_category }}</small> -->
+    <p class="item-desc">{{ item_desc }}</p>
+  </div>
+
+</div>

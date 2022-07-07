@@ -1,0 +1,126 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+.update-profile {
+  margin-top: 80px;
+  background-color: #1A1F26;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.33);
+  color: #d3d3d3;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.background{
+  background-image: url('/../../../assets/imgs/homepage4.jpg');
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: -webkit-fill-available;
+  overflow:auto;
+
+  /* font-family: monospace; */
+  font-family: 'PT Sans', sans-serif;
+  }
+
+.navigation_bar{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.6);
+  width: 100%;
+  padding-top: 50px;
+  height: 180px;
+  color: rgb(255, 255, 255);
+}
+
+.top_left_logo {
+  min-width: 180px;
+  vertical-align: top;
+  margin-right: 10px;
+  max-width: 40%;
+  max-height: 90%;
+}
+
+.top_text {
+  font-weight: bold;
+}
+
+.top_cook_logo{
+  min-width: 100px;
+  max-width: 20%;
+  max-height: 30%;
+  margin-left: 10px;
+}
+
+select {
+  background: url('http://www.free-icons-download.net/images/small-down-arrow-icon-15593.png');
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: -webkit-calc(100% - 8px) 50%;
+  background-position: calc(100% - 8px) 50%;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+form .rent-sale:hover {
+  color: #FFF;
+  background-color: rgb(29, 34, 43);
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+label {
+  color: #eee;
+}
+
+input,
+select,
+textarea {
+  background-color: #272D35;
+  border: 0px solid white;
+  color: #d4d4d4;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+
+  background-color: rgb(47, 55, 66);
+  border: 0px solid white;
+  color: #FFF;
+}
+
+.update,
+.delete {
+  color: #FFF;
+  position: relative;
+  bottom: 0px;
+  background: #541AD3 !important;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  width: 100%;
+}
+
+.update:hover,
+.delete:hover {
+  position: relative;
+  bottom: 2px;
+  background: rgb(100, 28, 255) !important;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}

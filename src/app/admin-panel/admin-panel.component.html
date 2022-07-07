@@ -1,0 +1,148 @@
+<div class="background"></div>
+
+<div class="container parent-container">
+  <div class="row nopadding">
+    <div class="col-12 nopadding form-wrapper">
+      <h2>ADMIN Panel</h2>
+      <form class="filter-form" [formGroup]="filterForm">
+        <div class="radio-wrapper" *ngFor="let type of types">
+          <label>
+            <input type="radio" formControlName="type" [value]="type" />
+            {{ type }}
+          </label>
+        </div>
+        <div class="checkbox-wrapper" *ngIf="filterForm.value.type === 'Items'">
+          <label>
+            <input type="checkbox" formControlName="active" /> Approved
+          </label>
+          <label
+            ><input type="checkbox" formControlName="inactive" /> Not Approved
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div
+    class="container nopadding table-wrapper"
+    *ngIf="filterForm.value.type === 'Items'"
+  >
+    <div class="row nopadding">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Item Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Price</th>
+            <th scope="col">Security Amount</th>
+            <th scope="col">Approved</th>
+            <th scope="col">Sold</th>
+            <th scope="col">Operations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data">
+            <td>{{ item.item_name | titlecase }}</td>
+            <td>{{ item.sale_rent | titlecase }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.security_amount }}</td>
+            <td>{{ item.approved ? "Yes" : "No" }}</td>
+            <td>{{ item.sold ? "Yes" : "No" }}</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button
+                  type="button"
+                  class="btn btn-sm btn-view"
+                  (click)="navigateToDetails($event, item)"
+                >
+                  View
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-delete"
+                  (click)="toggleApprove(item.id, item.approved)"
+                >
+                  {{ item.approved ? "Un-Approve" : "Approve" }}
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-purple btn-sm"
+                  (click)="togglePopular(item.id, item.isPopular)"
+                >
+                  {{ item.isPopular ? "Un-Popular" : "Popular" }}
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-orange"
+                  (click)="toggleDeal(item.id, item.isDeal)"
+                >
+                  {{ item.isDeal ? "Un-Deal" : "Deal" }}
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    class="container nopadding table-wrapper"
+    *ngIf="filterForm.value.type === 'Users'"
+  >
+    <div class="col-12 nopadding">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Email</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Operations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of users">
+            <td>{{ item.email }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.phone }}</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-delete btn-sm"
+                (click)="deleteUser(item.id)"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="dummy">
+  <div
+    class="{{
+      error ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+    }}"
+    *ngIf="error"
+  >
+    <div class="notifier-wrapper">
+      <div class="notifier-text">
+        {{ error }}
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="{{
+      success ? 'notifier notifier-show-anim' : 'notifier notifier-hide-anim'
+    }}"
+    *ngIf="success"
+  >
+    <div class="notifier-wrapper">
+      <div class="{{ success ? 'notifier-text n-success' : 'notifier-text' }}">
+        {{ success }}
+      </div>
+    </div>
+  </div>
+</div>

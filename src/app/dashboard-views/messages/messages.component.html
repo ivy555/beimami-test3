@@ -1,0 +1,33 @@
+
+<div class="background"></div>
+
+<div class="navigation_bar" style="overflow: hidden;">
+  <img class="top_left_logo" src="/../../../assets/imgs/logo-white.png">
+  <div class="top_text">Hier treffen Genießer auf lokale Hobby-Köche.</div>
+  <img class="top_cook_logo" src="/../../../assets/imgs/logo-white1.png">
+</div>
+
+<div class="container parent-container">
+  <div class="row">
+    <div class="col-lg-3 col-3">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="col-lg-9 col-12">
+      <div class="conversation-wrapper" >
+        <div class="conversation-message clickable" *ngFor="let i of messageInbox" [routerLink]="'/dashboard/messages/conversation'"
+          [queryParams]="{ adId: i.adId}">
+          <div class="conversation-info">
+            <span class="conversation-person"> {{ i.sender.name}} </span>
+            <span class="conversation-item"> {{ i.ad.item_name }} </span>
+          </div>
+          <div class="conversation-text">
+            <p class="nopadding">
+              {{ i.message }}
+            </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+

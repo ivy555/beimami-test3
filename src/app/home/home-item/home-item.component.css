@@ -1,0 +1,88 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+.item-box {
+  position: relative;
+  width: auto !important;
+  max-width: 256px !important;
+  height: auto !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  margin-right: 32px;
+  -webkit-transition: 0.33s;
+  -o-transition: 0.33s;
+  transition: 0.33s;
+  bottom: 0px;
+}
+
+.item-box:hover {
+  bottom: 5px;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.65);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.65);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.item-box .bottom-side {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  background: var(--header-background-color, #232323);
+  color: var(--header-text-color, #232323);
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.item-box img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 256px !important;
+  height: 128px !important;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.item-title {
+  display: inline-block;
+  width: 50%;
+  padding: 8px 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.item-price {
+  width: 50%;
+  display: inline-block;
+  margin-left: auto;
+  padding: 8px 16px;
+  color: #8BC34A;
+  font-weight: bold;
+  text-align: right;
+}

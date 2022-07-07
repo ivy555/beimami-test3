@@ -1,0 +1,156 @@
+* {
+  color: #ffffff;
+  text-shadow: 2px 1px #000000;
+}
+
+.about-background {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url('../../../assets/imgs/about_imgs/fulda.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-background::before {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(245, 245, 245, .3);
+}
+
+.main-wrapper {
+  padding: 64px;
+  padding-top: 168px;
+}
+
+.about-title {
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.about-title-sub {
+  margin-top: 0;
+  text-transform: uppercase;
+  color: #ffffff
+}
+
+.about-desc {
+  font-size: 1.25em;
+  margin: 24px 0px;
+}
+
+.rounded-img {
+  border-radius: 50%;
+  /* border: 8px solid rgb(0 0 0 / 50%); */
+}
+
+.name-text {
+  margin-top: 12px;
+  margin-bottom: 0px;
+}
+
+.role-text {
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #00ff00;
+}
+
+.desc-text {
+  margin-top: 12px;
+  padding: 0 6px;
+}
+
+.member-container {
+  padding: 24px;
+}
+
+.about-link {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 64px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 24px;
+  padding: 10px 24px;
+  background: #2F3545;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 600;
+  -webkit-transition: 0.25s all;
+  -o-transition: 0.25s all;
+  transition: 0.25s all;
+}
+
+.about-link:hover {
+  -webkit-transition: 0.25s all;
+  -o-transition: 0.25s all;
+  transition: 0.25s all;
+  background: #275efe;
+}
+
+.element-container {
+  padding: 36px 24px;
+  background: rgb(0 0 0 / 40%);
+  min-height: 480px;
+  border-radius: 16px;
+  -webkit-box-shadow: 26px 21px 68px -41px rgba(0, 0, 0, 0.75);
+  box-shadow: 26px 21px 68px -41px rgba(0, 0, 0, 0.75);
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .desc-text {
+    padding: 0 20px;
+  }
+
+  .about-desc {
+    font-size: 1.1em;
+  }
+
+  .element-container {
+    padding: 0%;
+  }
+
+  .container{
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .main-wrapper{
+    padding: 32px;
+  }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  .member-container {
+    padding: 12px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+  .member-container {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,76 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+<div class="background">
+    <app-location></app-location>
+
+    <div class="center"> 
+
+        <div class="side-menu-right">
+            <title>Image Slider</title>
+            <div class="slider-container">
+            <div class="menu">
+                <label for="slide-dot-1"></label>
+                <label for="slide-dot-2"></label>
+                <label for="slide-dot-3"></label>
+            </div>
+
+            <input id="slide-dot-1" type="radio" name="slides" checked>
+            <div class="slide slide-1">
+                <div class="text-img">
+                    <div class="text-top">Erfahrungsberichte von Köchen und Genießern auf BEIMAMI</div><br />
+                    <div class="text-middle">"Auf BEIMAMI werde ich als begnadete Köchin gefeiert und verdiene Geld mit meinem Hobby - einfach von zu Hause aus!"</div><br />
+                    <div class="text-bottom">Julia aus Münster | BEIMAMI Köchin</div>
+                </div> 
+            </div>
+
+            <input id="slide-dot-2" type="radio" name="slides">
+            <div class="slide slide-2">
+                <div class="text-img">
+                    <div class="text-top">Erfahrungsberichte von Köchen und Genießern auf BEIMAMI</div><br />
+                    <div class="text-middle">"Auf BEIMAMI werde KOCH KOCH KOCH KOCH KOCH als begnadeter KOCH gefeiert und verdiene Geld mit meinem Hobby - einfach von zu Hause aus!"</div><br />
+                    <div class="text-bottom">Alex aus Berlin | BEIMAMI KOCH</div>
+                </div>
+            </div>
+
+
+            <input id="slide-dot-3" type="radio" name="slides">
+            <div class="slide slide-3">
+                <div class="text-img">
+                    <div class="text-top">Erfahrungsberichte von Köchen und Genießern auf BEIMAMI</div><br />
+                    <div class="text-middle">"MUTTER MUTTER MUTTER MUTTER MUTTER MUTTER MUTTER. Geld mit meinem Hobby - einfach von zu Hause aus!"</div><br />
+                    <div class="text-bottom">Lara aus Frankfurt | BEIMAMI Köchin</div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- <div class="text-img">
+            <div class="text-top">Erfahrungsberichte von Köchen und Genießern auf BEIMAMI</div><br />
+            <div class="text-middle">"Auf BEIMAMI werde ich als begnadete Köchin gefeiert und verdiene Geld mit meinem Hobby - einfach von zu Hause aus!"</div><br />
+            <div class="text-bottom">Julia aus Münster | BEIMAMI Köchin</div>
+        </div> -->
+    </div>
+
+</div>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("slide");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>

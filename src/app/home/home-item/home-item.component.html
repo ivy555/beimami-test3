@@ -1,0 +1,10 @@
+<div class="item-box clickable" [routerLink]="'/item-view'" [queryParams]="{ 'itemId': item_id}">
+  
+  <div class="top-side">
+    <img src="{{ img_link }}" alt="Item Image" />
+  </div>
+  <div class="bottom-side">
+    <h6 class="item-title"> {{ item_title }} </h6>
+    <span class="item-price">&euro;{{ item_price }} </span>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+.fake-body {
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+.main-wrapper {
+  margin: 0 auto;
+  padding: 48px 0;
+  background-color: #fff;
+}
+
+.rounded-img {
+  border-radius: 50%;
+  border: 2px solid #eee;
+}
+
+.small {
+  color: #666;
+}
+
+.blue {
+  color: #275efe;
+}
+
+.blue-bg {
+  background-color: #275efe;
+}
+
+.dark {
+  color: black;
+}
+
+.dark-bg {
+  background-color: black;
+}
+
+.page-footer {
+  width: 100%;
+  position: fixed !important;
+  bottom: 0;
+}
