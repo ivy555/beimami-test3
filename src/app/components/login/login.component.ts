@@ -5,24 +5,31 @@ import { HttpClient } from "@angular/common/http";
 import { AuthorizationService } from "src/app/services/authorization.service";
 import { Router } from "@angular/router";
 import { AppComponent } from "../../app.component";
+import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthService, SocialLoginModule, SocialUser } from "angularx-social-login";
+
+
+
 
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.css"]
 })
+
 export class LoginComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private authService: AuthorizationService,
     private router: Router,
-    public appComp: AppComponent
+    public appComp: AppComponent,
   ) {}
 
   genders = ["male", "female"];
   loginForm: FormGroup;
   forbiddenUsernames = ["Chris", "Anna"];
   error: string = null;
+ user: SocialUser | undefined;
+ //GoogleLoginProvider = GoogleLoginProvider;
 
   ngOnInit() {
     this.authService.showMessage();
@@ -33,6 +40,7 @@ export class LoginComponent implements OnInit {
         Validators.minLength(8)
       ])
     });
+
   }
 
   onSubmit() {

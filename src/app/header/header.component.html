@@ -1,4 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
+  <select #langSelect (change)="changeLang(langSelect.value)">  
+    <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>  
+</select> 
   <img
     src="../../assets/imgs/logo-white.png"
     class="navbar-logo clickable"
@@ -18,10 +21,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto" *ngIf="!appComp.isLogged">
       <li class="nav-item">
-        <a class="nav-link clickable" (click)="redirect('/cook-info')">Koch Werden</a>
+        <a class="nav-link clickable" (click)="redirect('/cook-info')">{{'Koch Werden'}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link clickable" (click)="redirect('/about-us')">About</a>
+        <a class="nav-link clickable" (click)="redirect('/about-us')">{{ 'About'| translate}}</a>
       </li>
       <li class="nav-item">
         <a class="nav-link clickable" (click)="redirect('/shopping-cart')">
@@ -98,12 +101,12 @@
     </ul>
 
     <ul class="navbar-nav ml-auto" *ngIf="!appComp.isLogged">
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link clickable" (click)="redirect('/cook-info')">Koch Werden</a>
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <a class="nav-link clickable" (click)="redirect('/about-us')">About</a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a class="nav-link clickable" (click)="redirect('/register')">
           <fa name="user-plus"></fa> Register</a

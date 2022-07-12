@@ -1,9 +1,11 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AngularFontAwesomeModule } from "angular-font-awesome";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 // import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from "./app.component";
@@ -61,6 +63,17 @@ import { CheckoutCartComponent } from "./shopping-cart/checkout-cart/checkout-ca
 import { LocationTrackerComponent } from "./location-tracker/location-tracker.component";
 import { CookInfoComponent } from './cook-info/cook-info.component';
 //import { AgmCoreModule } from '@agm/core';
+import { FacebookLoginProvider, SocialAuthService,SocialAuthServiceConfig, SocialLoginModule } from "angularx-social-login";
+
+
+
+
+
+
+
+export const createTranslateLoader = (http:HttpClient) => {
+  return new TranslateHttpLoader(http, './assests/i18/', '.json');
+} ;
 
 
 const appRoutes: Routes = [
@@ -299,13 +312,21 @@ const appRoutes: Routes = [
     // AgmCoreModule.forRoot({
     //   apiKey: 'GOOGLEAPIKEY'
     // }),
+    TranslateModule.forRoot({
+      loader: {
+        provide:TranslateLoader,
+        useFactory: createTranslateLoader, 
+        deps: [HttpClient]
+      }
+    }),
     BrowserModule,
     FormsModule,
     HttpClientModule,
     AngularFontAwesomeModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    SocialLoginModule
 
   ],
   providers: [{

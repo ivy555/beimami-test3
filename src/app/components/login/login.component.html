@@ -62,10 +62,38 @@
         <p>Passwort vergessen?</p>
         
 
-        <button class="btn login-google"   type="submit"> <i class="fab fa-google"></i> Mit Google Fortfahren </button>
+        <!-- <button class="btn login-google"   type="submit"> <i class="fab fa-google"></i> Mit Google Fortfahren </button>
         <button class="btn login-facebook" type="submit"> <i class="fab fa-facebook-f"></i> Mit Facebook Fortfahren</button>
-        <button class="btn login-apple"    type="submit"> <i class="fab fa-apple"></i> Mit Apple Fortfahren</button>
-
+        <button class="btn login-apple"    type="submit"> <i class="fab fa-apple"></i> Mit Apple Fortfahren</button> -->
+         <div class="card-block d-flex justify-content-center">
+           <!-- <asl-google-signin-button class="mx-1"></asl-google-signin-button> -->
+          <!-- <button
+            class="btn btn-social-icon btn-facebook mx-1"
+            (click)="signInWithFB()"
+          > -->
+          <button
+            class="btn btn-social-icon btn-facebook mx-1" (click)="signInWithFB()">
+            <span class="fab fa-facebook"></span>
+          </button>
+          <!-- <button
+            class="btn btn-social-icon btn-amazon mx-1"
+            (click)="signInWithAmazon()"
+          >
+            <span class="fab fa-amazon"></span>
+          </button>
+          <button
+            class="btn btn-social-icon btn-amazon mx-1"
+            (click)="signInWithVK()"
+          >
+            <span class="fab fa-vk"></span>
+          </button>
+          <button
+            class="btn btn-social-icon btn-microsoft mx-1"
+            (click)="signInWithMicrosoft()"
+          >
+            <span class="fab fa-microsoft"></span>
+          </button> -->
+         </div>
       </form>
     </div>
   </div>
